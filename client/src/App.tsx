@@ -1,0 +1,20 @@
+import { useSelector } from 'react-redux'
+import { FormContainer } from './components/FormContainer'
+import { Indentity } from './components/Indentity'
+import { ResultContainer } from './components/ResultContainer'
+import { RootState } from './store/store'
+
+function App() {
+	const formVariant = useSelector(
+		(state: RootState) => state.formVariant.formVariant
+	)
+
+	return (
+		<main className='flex flex-col sm:flex-row h-[100vh] bg-zinc-50'>
+			{formVariant ? <FormContainer /> : <Indentity />}
+			<ResultContainer />
+		</main>
+	)
+}
+
+export default App
