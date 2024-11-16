@@ -1,0 +1,23 @@
+.shrink-enter {
+	opacity: 0;
+	transform: scale(0.5); /* Starts small */
+}
+
+.shrink-enter-active {
+	opacity: 1;
+	transform: scale(1); /* Grows to full size */
+	transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+.shrink-exit {
+	opacity: 1;
+	display: none;
+	transform: scale(1); /* Full size before shrinking */
+}
+
+.shrink-exit-active {
+	opacity: 0;
+	display: none;
+	transform: scale(0.5); /* Shrinks to the center */
+	transition: opacity 300ms ease-in, transform 300ms ease-in;
+}

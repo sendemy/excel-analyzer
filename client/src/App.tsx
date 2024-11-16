@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion'
 import { useSelector } from 'react-redux'
 import { FormContainer } from './components/FormContainer'
 import { Indentity } from './components/Indentity'
@@ -10,8 +11,11 @@ function App() {
 	)
 
 	return (
-		<main className='flex flex-col sm:flex-row h-[100vh] bg-zinc-50'>
-			{formVariant ? <FormContainer /> : <Indentity />}
+		<main className='flex flex-col sm:flex-row h-[100vh] bg-zinc-50 overflow-hidden'>
+			<AnimatePresence mode='wait'>
+				{formVariant ? <FormContainer /> : <Indentity />}
+			</AnimatePresence>
+
 			<ResultContainer />
 		</main>
 	)
