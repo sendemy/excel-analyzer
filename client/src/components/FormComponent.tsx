@@ -100,7 +100,7 @@ export function FormComponent() {
 									<FormDescription>
 										{formVariant === 'student'
 											? 'Введите вашу группу'
-											: 'Введите ваше ФИО'}
+											: 'Введите ваше имя в формате Фамилия И. О.'}
 									</FormDescription>
 									<FormMessage />
 								</FormItem>
